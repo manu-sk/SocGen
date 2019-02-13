@@ -1,0 +1,49 @@
+
+How to login ?
+1. public IP: 18.206.79.222
+2. ec2-user : username ( login as )
+
+Steps on the instance:
+*yum install httpd
+*yum install nano
+*cd /var/www/html
+*touch default.html
+*nano default.html ( add content )
+*service httpd start
+*netstat -plten
+
+How to define DNS name?
+*A instance1.example1.example.com	3.91.183.137
+*CNAME database.example.com rds.amazon
+
+install aws cli on windows
+* install python and pip on windows
+* pip install awscli
+* aws configure ( enter creds from the excel sheet generated when we created user)
+* run aws ec2 describe-instances
+
+
+* creating role and adding it to instance
+* installing awscli on instance ( no need to configure )
+* run aws ec2 describe-instances --region="your region"
+* run aws s3 list
+
+Day 2 :
+create AMI image from instance
+launch the AMI
+login to the instance created by ami
+run lsblk
+
+note : while lauching the instance from ami we can change the configurations like volume,cpu etc.
+
+uptime.is ( not important )
+
+
+Created s3 bucket
+added permissions
+added policies
+executed some commands from python ( awscli )
+
+AWS EFS ( elastic file system )
+Create efs on console
+
